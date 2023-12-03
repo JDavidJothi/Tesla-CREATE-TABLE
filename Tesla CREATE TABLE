@@ -1,0 +1,13 @@
+CREATE DATABASE Sample;
+
+USE [Sample];
+GO
+
+CREATE TABLE tblGender
+(
+	ID INT NOT NULL PRIMARY KEY,
+	Gender NVARCHAR(50) NOT NULL
+)
+
+ALTER TABLE tblPerson ADD CONSTRAINT tblPerson_GenderID_FK
+FOREIGN KEY (GenderId) REFERENCES tblGender(ID);
